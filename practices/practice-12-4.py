@@ -25,9 +25,6 @@ class Game:
             self.rocket.update()
             self._update_screen()
 
-            # Make the most recently drawn screen visible.
-            pygame.display.flip()
-
     def _check_events(self):
         """Respond to keypresses and mouse events."""
         for event in pygame.event.get():
@@ -66,6 +63,7 @@ class Game:
         """Update images on the screen and flip to the new screen."""
         self.screen.fill(self.bg_color)
         self.rocket.blitme()
+        pygame.display.flip()
 
 
 class Rocket:
