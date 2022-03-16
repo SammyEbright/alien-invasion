@@ -1,5 +1,4 @@
 import sys
-from matplotlib.style import available
 
 import pygame
 
@@ -90,7 +89,6 @@ class AlienInvasion:
     def _create_fleet(self):
         """Create fleet of aliens."""
         # Create an alien and place find the number of aliens in a row.
-
         # Spacing between each alien is equal to the width of an alien.
         alien = Alien(self)
         alien_width, alien_height = alien.rect.size
